@@ -12,7 +12,7 @@
 # nslookup的作用
 + nslookup查询对应的域名对应的ip地址，也可以输入ip会返回一个主机名
 + ![nslookup查询]('https://github.com/zhuliba333/blog-test/blob/master/http/img/nslookup.png','nslookup')
-#ip地址的作用&ping
+# ip地址的作用&ping
 + ip地址是网络协议就是为互联网的每一个网络和每一台主机分配的地址，代表设备的地址，就像住址一样，有了ip就直接能访问到这台设备。
 + ping：测试你到某一个ip之间网络是否通畅。
 
