@@ -48,7 +48,7 @@ getHTML.onclick=()=>{
     // }
     request.send();
 
-    request.onreadystatechange=()=>{
+    request.onreadystatechange=()=>{//浏览器等有结果会调用这个函数
         console.log(request.readyState)
         if(request.readyState===4){
             console.log('我获取到response')
