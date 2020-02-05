@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"src.e31bb0bc.css","sourceRoot":"..","sourcesContent":["#app1\n{\n    border:1px solid red;\n    widows: 50vw;\n    height: 50vh;\n\n}\n#app1 .outPut{\n\n}\n#app1 .actions{\n\n}"]}
