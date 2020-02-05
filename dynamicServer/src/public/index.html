@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <div>
+            <label>用户名<input type="text"  name="name"/></label>
+        </div>
+        <div>
+            <label>密码<input autocomplete  type="password"  name="password"/></label>
+        </div>
+        <div>
+            <button type="submit">提交</button>
+        </div>
+    </form>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#myForm').on('submit',(e)=>{
+            e.preventDefault();//这行很重要，阻止表单默认提交。没有这行，你是看不到add请求的res的.而且即使是post，链接也会带有参数哦
+            const name = $('#myForm').find('input[name=name]').val();
+            const password = $('#myForm').find('input[name=password]').val();
+            console.log(name,password)
+            $.ajax({
+                 method:'POST',
+                url:'/add',
+                contentType:'text/json;charset=UTF-8',
+                data:JSON.stringify({name,password})
+            }).then(()=>{
+                console.log('我要跳转了')
+                location.href = './login.html';
+            },()=>{
+
+            })
+        })
+    </script>
+</body>
+</html>
