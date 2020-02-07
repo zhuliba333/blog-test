@@ -1,8 +1,5 @@
 import $ from 'jquery'
 import Model from "./base/Model"
-const eventBus = $({})
- console.log(eventBus.on)
- console.log(eventBus.trigger)
 const m = new Model({
    data:{
       index : parseInt(localStorage.getItem("localkey")||1)
@@ -10,7 +7,7 @@ const m = new Model({
    update(data){
       Object.assign(m.data,data);
       localStorage.setItem("localkey",m.data.index)
-      eventBus.trigger('changetab');//事件的字符串不能用空格
+      m.trigger('changetab');//事件的字符串不能用空格
    },
 })
 
@@ -40,7 +37,7 @@ const View = {
       View.el = $(container);
       View.render();
       View.bindEvents();
-      eventBus.on('changetab',()=>{
+      m.on('changetab',()=>{
         console.log('接收到消息了')
         View.render();
      })

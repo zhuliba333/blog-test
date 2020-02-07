@@ -1,5 +1,5 @@
 import $ from 'jquery'
-const eventBus = $({})
+const eventBus = $(window)
  console.log(eventBus.on)
  console.log(eventBus.trigger)
  const m = {

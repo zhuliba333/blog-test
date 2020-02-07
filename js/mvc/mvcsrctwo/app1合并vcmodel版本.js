@@ -2,7 +2,7 @@
 import $ from 'jquery'
 import Model from "./base/Model"
 import View from "./base/View"
-const eventBus = $({})
+const eventBus = $(window)
  console.log(eventBus.on)
  console.log(eventBus.trigger)
 const m = new Model({

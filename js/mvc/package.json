@@ -4,6 +4,12 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "view": "^1.1.1",
+    "vue": "^2.6.11"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.js",
+    "info":"如果引用vue出错，再加这个配置试试，我的不用加也不会报错"
   }
 }
